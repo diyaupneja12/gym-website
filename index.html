@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro Gym</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Pro Gym</div>
+    <nav>
+      <button onclick="openPopup('about')">About</button>
+      <button onclick="openPopup('trainers')">Trainers</button>
+      <button onclick="openPopup('plans')">Plans</button>
+      <button onclick="openPopup('contact')">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="main-heading">Welcome to Pro Gym</h1>
+    <p id="typing" class="tagline-text"></p>
+
+    <!-- Gym Gallery -->
+    <section class="gym-gallery">
+      <img src="images/gym1.jpeg" alt="Gym Interior 1" />
+      <img src="images/gym2.jpeg" alt="Gym Interior 2" />
+    </section>
+
+    <!-- Stats Section (Static Numbers) -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <h2>250+</h2>
+        <p>Active Members</p>
+      </div>
+      <div class="stat-card">
+        <h2>15</h2>
+        <p>Expert Trainers</p>
+      </div>
+      <div class="stat-card">
+        <h2>40+</h2>
+        <p>Monthly Classes</p>
+      </div>
+      <div class="stat-card">
+        <h2>10+</h2>
+        <p>Years Experience</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- About Popup -->
+  <div id="about" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('about')">&times;</span>
+      <h2>About Us</h2>
+      <p>
+        Unleash Your Potential. Experience Fitness Like Never Before.<br><br>
+        At Pro Gym, we redefine fitness with cutting-edge technology, smart workout zones, AI-driven plans, and a motivating atmosphere that pushes you to your limits. Our trainers mentor you, our ambiance energizes you, and our tech transforms you. <br><br>
+        From voice-guided sessions to mood-based lighting and music, Pro Gym blends modern science and motivation like no other. Come, rise with us!
+      </p>
+    </div>
+  </div>
+
+  <!-- Trainers Popup -->
+  <div id="trainers" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('trainers')">&times;</span>
+      <h2>Our Trainers</h2>
+
+      <div class="trainer-buttons">
+        <button onclick="showTrainers('male')">Male Trainers</button>
+        <button onclick="showTrainers('female')">Female Trainers</button>
+      </div>
+
+      <div id="male-trainers" class="trainer-section">
+        <div class="trainer-card">
+          <img src="images/gym trainer1.jpeg" alt="Male Trainer 1">
+          <p>Rohit Sharma – Strength Coach with 8+ years experience.</p>
+        </div>
+      </div>
+
+      <div id="female-trainers" class="trainer-section hidden">
+        <div class="trainer-card">
+          <img src="images/gym trainer2.jpeg" alt="Female Trainer 1">
+          <p>Sneha Mehra – Certified Personal Trainer & Yoga Expert.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plans Popup -->
+  <div id="plans" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('plans')">&times;</span>
+      <h2>Membership Plans</h2>
+      <ul>
+        <li><strong>Basic Plan:</strong> ₹999/month – Gym Access + Cardio</li>
+        <li><strong>Standard Plan:</strong> ₹1499/month – Gym + Group Classes</li>
+        <li><strong>Premium Plan:</strong> ₹1999/month – Personal Trainer + Diet Plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact Popup -->
+  <div id="contact" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('contact')">&times;</span>
+      <h2>Contact Us</h2>
+      <p>Email: contact@progym.com</p>
+      <p>Phone: +91-9876543210</p>
+    </div>
+  </div>
+
+  <footer>Made with ❤️ by Diya</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
